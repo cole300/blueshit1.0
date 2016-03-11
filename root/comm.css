@@ -1,8 +1,8 @@
 .input-file {
 	display:inline-block;
-	width:100px;
-	height:30px;
-	line-height:30px;
+	width:160px;
+	height:20px;
+	line-height:20px;
 	background:#ddd;
 	text-align:center;
 	overflow:hidden;

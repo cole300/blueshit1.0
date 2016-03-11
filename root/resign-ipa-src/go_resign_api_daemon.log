@@ -1,0 +1,49 @@
+2016/03/09 11:55:22 child 42310 spawned, parent: 42309
+2016/03/09 11:55:22 shutting down (pid): 42309
+2016/03/09 11:55:22 failed to set NOFILE rlimit:  operation not permitted
+2016/03/09 11:56:44 map[Content-Disposition:[form-data; name="ipafile"; filename="ssd.ipa"] Content-Type:[application/octet-stream]]
+2016/03/09 11:56:45 /Users/gwd/work/git/blueshit1.0/root/ResignIPA.sh /var/folders/68/g_c6340s6c3dwftzjp7gtjv40000gn/T/ssd.ipa /Users/gwd/work/git/blueshit1.0/root/Resigned/ssd_ipa_20160309115644
+2016/03/09 11:56:49 file received
+/var/folders/68/g_c6340s6c3dwftzjp7gtjv40000gn/T/ssd.ipa -> /var/folders/68/g_c6340s6c3dwftzjp7gtjv40000gn/T/ipa.JYiKRFFC/ssd.ipa
+/var/folders/68/g_c6340s6c3dwftzjp7gtjv40000gn/T/ssd.ipa - /var/folders/68/g_c6340s6c3dwftzjp7gtjv40000gn/T/ipa.JYiKRFFC
+unzip ssd.ipa
+app is GoldenFraud iOS.app
+Warning: --resource-rules has been deprecated in Mac OS X >= 10.10!
+iPhone Distribution: Shanghai Xindong Enterprise Development Co., Ltd.: no identity found
+Executable=/private/var/folders/68/g_c6340s6c3dwftzjp7gtjv40000gn/T/ipa.JYiKRFFC/Payload/GoldenFraud iOS.app/GoldenFraud iOS
+Identifier=com.youxibaoku.zft.xy
+Format=bundle with Mach-O universal (armv7 arm64)
+CodeDirectory v=20200 size=61245 flags=0x0(none) hashes=3053+5 location=embedded
+Hash type=sha1 size=20
+CDHash=c76c1022f6bb7bd837796143098e7381049bd7a3
+Signature size=4376
+Authority=iPhone Distribution: Beijing DongFen Technology Development Co., Ltd.
+Authority=Apple Worldwide Developer Relations Certification Authority
+Authority=Apple Root CA
+Signed Time=2015年11月7日 上午3:35:33
+Info.plist entries=36
+TeamIdentifier=24338CSU29
+Sealed Resources=none
+Internal requirements count=1 size=212
+zip Resigned_ssd.ipa
+Resigned_ssd.ipa -> /Users/gwd/work/git/blueshit1.0/root/Resigned/ssd_ipa_20160309115644/Resigned_ssd.ipa
+/Users/gwd/work/git/blueshit1.0/root/Resigned/ssd_ipa_20160309115644/Resigned_ssd.ipa
+
+2016/03/09 20:02:41 map[Content-Type:[image/jpeg] Content-Disposition:[form-data; name="ipafile"; filename="image.jpg"]]
+2016/03/09 20:02:42 /Users/gwd/work/git/blueshit1.0/root/ResignIPA.sh /var/folders/68/g_c6340s6c3dwftzjp7gtjv40000gn/T/image.jpg /Users/gwd/work/git/blueshit1.0/root/Resigned/image_jpg_20160309200241
+2016/03/09 20:02:43 file received
+/var/folders/68/g_c6340s6c3dwftzjp7gtjv40000gn/T/image.jpg -> /var/folders/68/g_c6340s6c3dwftzjp7gtjv40000gn/T/ipa.beWo04ey/image.jpg
+/var/folders/68/g_c6340s6c3dwftzjp7gtjv40000gn/T/image.jpg - /var/folders/68/g_c6340s6c3dwftzjp7gtjv40000gn/T/ipa.beWo04ey
+unzip image.jpg
+[image.jpg]
+  End-of-central-directory signature not found.  Either this file is not
+  a zipfile, or it constitutes one disk of a multi-part archive.  In the
+  latter case the central directory and zipfile comment will be found on
+  the last disk(s) of this archive.
+unzip:  cannot find zipfile directory in one of image.jpg or
+        image.jpg.zip, and cannot find image.jpg.ZIP, period.
+ERROR: unzip failed
+
+2016/03/10 20:49:44 signal received:  terminated
+2016/03/10 20:49:44 shutting down (pid): 42310
+doclean up
