@@ -9,7 +9,7 @@ import (
 	"os"
 	"syscall"
 	"time"
-	//	"net/url"
+	"net/url"
 	fcgi "bitbucket.org/PinIdea/fcgi_ext"
 	gozd "bitbucket.org/PinIdea/zero-downtime-daemon"
     "fmt"
@@ -56,6 +56,12 @@ func (s FastCGIServer) ServeFCGI(resp http.ResponseWriter, req *http.Request, fc
 		return
 	}
 
+	// 获取自定义的apk包名称
+	customName := req.FormValue("customName")
+	channel := req.FormValue("channel")
+	val_resign := req.FormValue("resign")
+	// fmt.Println("获取到Resign参数=",val_resign)
+
 	fname := strings.Replace(handler.Filename, " ", "_", -1)
 
 	dirname := fname + "_" + (time.Now().Format("20060102150405"))
@@ -80,12 +86,18 @@ func (s FastCGIServer) ServeFCGI(resp http.ResponseWriter, req *http.Request, fc
 	}()
 
 	time.Sleep(1 * time.Second)
-	
+
 	home := path.Join(HOMEDIR, "/git/blueshit1.0/root/Resigned/", dirname)
 	os.Mkdir(home, 0666)
 
-	log.Println(HOMEDIR+"/git/blueshit1.0/root/ResignIPA.sh", fname, home)
-	cmd := exec.Command(HOMEDIR+"/git/blueshit1.0/root/ResignIPA.sh", fname, home)
+	shName := "/ResignIPA.sh"
+	if(strings.Contains(handler.Filename,".apk") || strings.Contains(handler.Filename,".exe")){
+		shName = "/ResignAPK.sh"
+		dirname = "http://xindong-res.b0.upaiyun.com/"+channel+"/xindong/"+url.QueryEscape(customName)
+	}
+
+	log.Println(HOMEDIR+"/git/blueshit1.0/root/"+shName, fname, home)
+	cmd := exec.Command(HOMEDIR+"/git/blueshit1.0/root/"+shName, fname, home, handler.Filename, customName, channel, val_resign)
 
 	out, err := cmd.CombinedOutput()
 	if err != nil {
@@ -93,26 +105,31 @@ func (s FastCGIServer) ServeFCGI(resp http.ResponseWriter, req *http.Request, fc
 		return
 	}
 
-	log.Println(string(out))
+	log.Println("fname的内容:",fname)
+	log.Println("home的内容:",home)
+	log.Println("out的内容",string(out))
 
 	resp.WriteHeader(http.StatusOK)
 	resp.Write([]byte("<html><head></head><body>"))
-	
+
 	out = bytes.Trim(out, "\n")
 	arr := strings.Split(string(out), "\n")
-
 	out = bytes.Replace(out, []byte("\n"), []byte("<br/>"), -1)
-
 	resp.Write(out)
 
-	if len(arr) > 0 && !strings.HasPrefix(arr[len(arr)-1], "ERROR") {
+	fmt.Println("生成下载链接=",dirname)
 
-		resp.Write([]byte("<br/><a href=\"/?dir=" + "Resigned/" + dirname + "\">下载链接<a/><br/>"))
+	if len(arr) > 0 && !strings.HasPrefix(arr[len(arr)-1], "ERROR") {
+		// resp.Write([]byte("<br/><a href=\"/?dir=" + "Resigned/" + dirname + "\">下载链接<a/><br/>"))
+		if(strings.Contains(handler.Filename,".apk") || strings.Contains(handler.Filename,".exe")){ // 安卓
+			resp.Write([]byte("<br/><h1 align=\"center\">下载链接地址</h1><br/> <div style=\"text-align:center;\"><a href=\""+ dirname + "\">"+ dirname +"<a/></div><br/>"))
+		}else{ // IOS
+			resp.Write([]byte("<br/><a href=\"/?dir=" + "Resigned/" + dirname + "\">下载链接<a/><br/>"))
+		}
 
 	}
 
 	resp.Write([]byte("</body></html>"))
-
 	os.RemoveAll(fname)
 }
 
@@ -164,7 +181,7 @@ func main() {
 		switch s {
 		case syscall.SIGTERM:
 			// do some clean up and exit
-			fmt.Println("doclean up")
+			fmt.Println("doclean ups")
 			return
 		}
 	}

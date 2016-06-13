@@ -1,49 +1,79 @@
-2016/03/09 11:55:22 child 42310 spawned, parent: 42309
-2016/03/09 11:55:22 shutting down (pid): 42309
-2016/03/09 11:55:22 failed to set NOFILE rlimit:  operation not permitted
-2016/03/09 11:56:44 map[Content-Disposition:[form-data; name="ipafile"; filename="ssd.ipa"] Content-Type:[application/octet-stream]]
-2016/03/09 11:56:45 /Users/gwd/work/git/blueshit1.0/root/ResignIPA.sh /var/folders/68/g_c6340s6c3dwftzjp7gtjv40000gn/T/ssd.ipa /Users/gwd/work/git/blueshit1.0/root/Resigned/ssd_ipa_20160309115644
-2016/03/09 11:56:49 file received
-/var/folders/68/g_c6340s6c3dwftzjp7gtjv40000gn/T/ssd.ipa -> /var/folders/68/g_c6340s6c3dwftzjp7gtjv40000gn/T/ipa.JYiKRFFC/ssd.ipa
-/var/folders/68/g_c6340s6c3dwftzjp7gtjv40000gn/T/ssd.ipa - /var/folders/68/g_c6340s6c3dwftzjp7gtjv40000gn/T/ipa.JYiKRFFC
-unzip ssd.ipa
-app is GoldenFraud iOS.app
-Warning: --resource-rules has been deprecated in Mac OS X >= 10.10!
-iPhone Distribution: Shanghai Xindong Enterprise Development Co., Ltd.: no identity found
-Executable=/private/var/folders/68/g_c6340s6c3dwftzjp7gtjv40000gn/T/ipa.JYiKRFFC/Payload/GoldenFraud iOS.app/GoldenFraud iOS
-Identifier=com.youxibaoku.zft.xy
-Format=bundle with Mach-O universal (armv7 arm64)
-CodeDirectory v=20200 size=61245 flags=0x0(none) hashes=3053+5 location=embedded
-Hash type=sha1 size=20
-CDHash=c76c1022f6bb7bd837796143098e7381049bd7a3
-Signature size=4376
-Authority=iPhone Distribution: Beijing DongFen Technology Development Co., Ltd.
-Authority=Apple Worldwide Developer Relations Certification Authority
-Authority=Apple Root CA
-Signed Time=2015年11月7日 上午3:35:33
-Info.plist entries=36
-TeamIdentifier=24338CSU29
-Sealed Resources=none
-Internal requirements count=1 size=212
-zip Resigned_ssd.ipa
-Resigned_ssd.ipa -> /Users/gwd/work/git/blueshit1.0/root/Resigned/ssd_ipa_20160309115644/Resigned_ssd.ipa
-/Users/gwd/work/git/blueshit1.0/root/Resigned/ssd_ipa_20160309115644/Resigned_ssd.ipa
+2016/06/06 14:42:22 child 3167 spawned, parent: 3166
+2016/06/06 14:42:22 shutting down (pid): 3166
+2016/06/06 17:51:56 map[Content-Disposition:[form-data; name="ipafile"; filename="横扫千军-xindongAndPC_0601_7.4.0_android_patched_resign.apk"] Content-Type:[application/octet-stream]]
+2016/06/06 17:51:59 /Users/gwd/work/git/blueshit1.0/root//ResignAPK.sh /tmp/横扫千军-xindongAndPC_0601_7.4.0_android_patched_resign.apk /Users/gwd/work/git/blueshit1.0/root/Resigned/横扫千军-xindongAndPC_0601_7_4_0_android_patched_resign_apk_20160606175156
+2016/06/06 17:52:14 fname的内容: /tmp/横扫千军-xindongAndPC_0601_7.4.0_android_patched_resign.apk
+2016/06/06 17:52:14 home的内容: /Users/gwd/work/git/blueshit1.0/root/Resigned/横扫千军-xindongAndPC_0601_7_4_0_android_patched_resign_apk_20160606175156
+2016/06/06 17:52:14 out的内容 
 
-2016/03/09 20:02:41 map[Content-Type:[image/jpeg] Content-Disposition:[form-data; name="ipafile"; filename="image.jpg"]]
-2016/03/09 20:02:42 /Users/gwd/work/git/blueshit1.0/root/ResignIPA.sh /var/folders/68/g_c6340s6c3dwftzjp7gtjv40000gn/T/image.jpg /Users/gwd/work/git/blueshit1.0/root/Resigned/image_jpg_20160309200241
-2016/03/09 20:02:43 file received
-/var/folders/68/g_c6340s6c3dwftzjp7gtjv40000gn/T/image.jpg -> /var/folders/68/g_c6340s6c3dwftzjp7gtjv40000gn/T/ipa.beWo04ey/image.jpg
-/var/folders/68/g_c6340s6c3dwftzjp7gtjv40000gn/T/image.jpg - /var/folders/68/g_c6340s6c3dwftzjp7gtjv40000gn/T/ipa.beWo04ey
-unzip image.jpg
-[image.jpg]
-  End-of-central-directory signature not found.  Either this file is not
-  a zipfile, or it constitutes one disk of a multi-part archive.  In the
-  latter case the central directory and zipfile comment will be found on
-  the last disk(s) of this archive.
-unzip:  cannot find zipfile directory in one of image.jpg or
-        image.jpg.zip, and cannot find image.jpg.ZIP, period.
-ERROR: unzip failed
+生成下载链接= http://xindong-res.b0.upaiyun.com/hsqj/xindong/hsqj_800018_7.4.0.apk
+2016/06/06 17:54:31 map[Content-Disposition:[form-data; name="ipafile"; filename="横扫千军-xindongiOSPC_0601_7.4.0_android_patched_resign.apk"] Content-Type:[application/octet-stream]]
+2016/06/06 17:54:34 /Users/gwd/work/git/blueshit1.0/root//ResignAPK.sh /tmp/横扫千军-xindongiOSPC_0601_7.4.0_android_patched_resign.apk /Users/gwd/work/git/blueshit1.0/root/Resigned/横扫千军-xindongiOSPC_0601_7_4_0_android_patched_resign_apk_20160606175431
+2016/06/06 17:54:43 fname的内容: /tmp/横扫千军-xindongiOSPC_0601_7.4.0_android_patched_resign.apk
+2016/06/06 17:54:43 home的内容: /Users/gwd/work/git/blueshit1.0/root/Resigned/横扫千军-xindongiOSPC_0601_7_4_0_android_patched_resign_apk_20160606175431
+2016/06/06 17:54:43 out的内容 
 
-2016/03/10 20:49:44 signal received:  terminated
-2016/03/10 20:49:44 shutting down (pid): 42310
-doclean up
+生成下载链接= http://xindong-res.b0.upaiyun.com/hsqj/xindong/hsqj_800025_7.4.0.apk
+2016/06/08 14:31:12 map[Content-Disposition:[form-data; name="ipafile"; filename="口水封神_心动_1.0.apk"] Content-Type:[application/x-zip-compressed]]
+2016/06/08 14:31:15 /Users/gwd/work/git/blueshit1.0/root//ResignAPK.sh /tmp/口水封神_心动_1.0.apk /Users/gwd/work/git/blueshit1.0/root/Resigned/口水封神_心动_1_0_apk_20160608143112
+2016/06/08 14:31:23 fname的内容: /tmp/口水封神_心动_1.0.apk
+2016/06/08 14:31:23 home的内容: /Users/gwd/work/git/blueshit1.0/root/Resigned/口水封神_心动_1_0_apk_20160608143112
+2016/06/08 14:31:23 out的内容 
+
+生成下载链接= http://xindong-res.b0.upaiyun.com/ksfs/xindong/%E5%8F%A3%E6%B0%B4%E5%B0%81%E7%A5%9E_%E5%BF%83%E5%8A%A8%E5%B9%B3%E5%8F%B0+_0608.apk
+2016/06/08 14:36:11 e1 <nil>
+2016/06/08 14:36:11 e2 request Content-Type isn't multipart/form-data
+2016/06/08 14:36:15 e1 <nil>
+2016/06/08 14:36:15 e2 request Content-Type isn't multipart/form-data
+2016/06/08 14:43:59 map[Content-Disposition:[form-data; name="ipafile"; filename="口水封神_心动_1.0.apk"] Content-Type:[application/x-zip-compressed]]
+2016/06/08 14:44:01 /Users/gwd/work/git/blueshit1.0/root//ResignAPK.sh /tmp/口水封神_心动_1.0.apk /Users/gwd/work/git/blueshit1.0/root/Resigned/口水封神_心动_1_0_apk_20160608144359
+2016/06/08 14:44:08 fname的内容: /tmp/口水封神_心动_1.0.apk
+2016/06/08 14:44:08 home的内容: /Users/gwd/work/git/blueshit1.0/root/Resigned/口水封神_心动_1_0_apk_20160608144359
+2016/06/08 14:44:08 out的内容 
+
+生成下载链接= http://xindong-res.b0.upaiyun.com/ksfs/xindong/%E5%8F%A3%E6%B0%B4%E5%B0%81%E7%A5%9E_%E5%BF%83%E5%8A%A8%E5%B9%B3%E5%8F%B0_0608.apk
+2016/06/08 21:47:04 map[Content-Disposition:[form-data; name="ipafile"; filename="三国罗曼史-3622.ipa"] Content-Type:[application/x-itunes-ipa]]
+2016/06/08 21:47:06 /Users/gwd/work/git/blueshit1.0/root//ResignIPA.sh /tmp/三国罗曼史-3622.ipa /Users/gwd/work/git/blueshit1.0/root/Resigned/三国罗曼史-3622_ipa_20160608214704
+2016/06/08 21:49:00 fname的内容: /tmp/三国罗曼史-3622.ipa
+2016/06/08 21:49:00 home的内容: /Users/gwd/work/git/blueshit1.0/root/Resigned/三国罗曼史-3622_ipa_20160608214704
+2016/06/08 21:49:00 out的内容 看下TMP= /var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/ipa.t27sutaD
+file received
+/tmp/三国罗曼史-3622.ipa -> /var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/ipa.t27sutaD/三国罗曼史-3622.ipa
+/tmp/三国罗曼史-3622.ipa - /var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/ipa.t27sutaD
+chmod: -rf: No such file or directory
+app is rotk.app
+开始使用品质重新签名
+Payload/rotk.app/: replacing existing signature
+完成未重签名ipa= 三国罗曼史-3622.ipa
+三国罗曼史-3622.ipa -> sglms_xindong_1.0.3622.ipa
+sglms_xindong_1.0.3622.ipa -> /Users/gwd/work/git/blueshit1.0/root/Resigned/三国罗曼史-3622_ipa_20160608214704/sglms_xindong_1.0.3622.ipa
+/Users/gwd/work/git/blueshit1.0/root/Resigned/三国罗曼史-3622_ipa_20160608214704/sglms_xindong_1.0.3622.ipa
+上传前=rotk.app
+上传后=/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/ipa.t27sutaD/Payload/rotk.app/
+上传ipa到UpYun
+/Users/gwd/work/git/blueshit1.0/root/Resigned/三国罗曼史-3622_ipa_20160608214704
+=== 上传文件/Users/gwd/work/git/blueshit1.0/root/Resigned/三国罗曼史-3622_ipa_20160608214704/sglms_xindong_1.0.3622.ipa ===
+截取ipaName=sglms_xindong_1.0.3622.ipa
+bool(true)
+=== 上传成功===
+
+=== 上传plist /var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/ipa.t27sutaD/Payload/rotk.app/sglms_xindong_1.0.3622.ipa.plist ===
+bool(true)
+=== 上传成功===
+
+上传结束
+本地清理完成
+
+生成下载链接= 三国罗曼史-3622_ipa_20160608214704
+2016/06/08 21:50:50 map[Content-Disposition:[form-data; name="ipafile"; filename="rotk_心动_1.0_3622.apk"] Content-Type:[application/octet-stream]]
+2016/06/08 21:50:51 /Users/gwd/work/git/blueshit1.0/root//ResignAPK.sh /tmp/rotk_心动_1.0_3622.apk /Users/gwd/work/git/blueshit1.0/root/Resigned/rotk_心动_1_0_3622_apk_20160608215050
+2016/06/08 21:52:07 fname的内容: /tmp/rotk_心动_1.0_3622.apk
+2016/06/08 21:52:07 home的内容: /Users/gwd/work/git/blueshit1.0/root/Resigned/rotk_心动_1_0_3622_apk_20160608215050
+2016/06/08 21:52:07 out的内容 
+
+生成下载链接= http://xindong-res.b0.upaiyun.com/sglms/xindong/sglms_xindong_1.0.3622.apk
+2016/06/12 10:16:56 signal received:  terminated
+2016/06/12 10:16:56 shutting down (pid): 3167
+doclean ups
+2016/06/12 10:25:14 child 2399 spawned, parent: 2398
+2016/06/12 10:25:14 shutting down (pid): 2398

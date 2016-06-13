@@ -64,7 +64,7 @@ class UpYun {
     private $_bucketname;
     private $_username;
     private $_password;
-    private $_timeout = 30;
+    private $_timeout = 1300;//30
 
     /**
      * @deprecated
@@ -96,7 +96,7 @@ class UpYun {
     *
 	* @return object
 	*/
-	public function __construct($bucketname, $username, $password, $endpoint = NULL, $timeout = 30) {/*{{{*/
+	public function __construct($bucketname, $username, $password, $endpoint = NULL, $timeout = 1300) {/*{{{*/
 		$this->_bucketname = $bucketname;
 		$this->_username = $username;
 		$this->_password = md5($password);
@@ -187,6 +187,7 @@ class UpYun {
         $rsp = $this->_do_request('GET', $path);
 
         $list = array();
+        $tempList = array();
         if ($rsp) {
             $rsp = explode("\n", $rsp);
             foreach($rsp as $item) {
@@ -201,11 +202,12 @@ class UpYun {
                     'size' => intval($size),
                     'time' => intval($time),
                 );
-                array_push($list, $item);
+                //array_push($list, $item);
+                $tempList[] = $name;
             }
         }
 
-        return $list;
+        return $tempList;
     }/*}}}*/
 
     /**

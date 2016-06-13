@@ -2,8 +2,12 @@
 
 WORKDIR=`pwd`
 UNSIGNED_IPA=`basename "${1}"`
-RESIGNED_IPA="Resigned_${UNSIGNED_IPA}"
+RESIGNED_IPA="${UNSIGNED_IPA}"
 TMPDIR=`mktemp -d -t ipa`
+
+val_resign="${6}"
+
+echo "看下TMP=" $TMPDIR
 
 if [ -e "${1}" ]
 then
@@ -19,11 +23,12 @@ if [ -d "${2}" ]; then
 fi
 
 cp -v "${1}" "${TMPDIR}"
-echo "${1}" - "${TMPDIR}" 
+echo "${1}" - "${TMPDIR}"
 
 cd $TMPDIR
- 
-echo unzip  "${UNSIGNED_IPA}"
+cd ..
+sudo chmod -R 777 * -rf
+cd $TMPDIR
 
 unzip -q "${UNSIGNED_IPA}"
 
@@ -41,45 +46,52 @@ cd $TMPDIR
 
 echo app is $APPNAME
 
-rm -rf "Payload/${APPNAME}/_CodeSignature/"
-
-cp ~/work/git/blueshit1.0/root/Provisionings/Everything.mobileprovision "Payload/${APPNAME}/embedded.mobileprovision"
-
-security unlock -p s999
-
-if [ -f "Payload/${APPNAME}/ResourceRules.plist" ];
+if [ "${val_resign}" == "pinidea" ];
 then
-  codesign -f -s "iPhone Distribution: Shanghai Xindong Enterprise Development Co., Ltd." --entitlements ~/Projects/entitlements.plist "Payload/${APPNAME}" --resource-rules="Payload/${APPNAME}/ResourceRules.plist"
+	echo 开始使用品质重新签名
+	rm -rf "Payload/${APPNAME}/_CodeSignature/"
+	cp ~/work/git/blueshit1.0/root/Provisionings/embedded.mobileprovision "Payload/${APPNAME}/embedded.mobileprovision"
+	security unlock -p s999
+	/usr/bin/codesign -f -s "iPhone Distribution: PinIdea co., Ltd" --entitlements /Users/gwd/work/git/blueshit1.0/root/entitlements.plist Payload/*.app/
 else
-#UE5H8B62F9 --entitlements ~/Projects/entitlements.plist
-  codesign -f -s "iPhone Distribution: Shanghai Xindong Enterprise Development Co., Ltd." --entitlements ~/Projects/entitlements.plist "Payload/${APPNAME}" 
+	echo 不重新签名
 fi
-
-#verify
-codesign -dvvv "Payload/${APPNAME}"
-
-echo zip "${RESIGNED_IPA}"
  
-zip -qr "${RESIGNED_IPA}" Payload
+zip -r -q "${RESIGNED_IPA}" Payload
 
-if [ $? != 0 ]; 
-then
-  echo "ERROR: zip failed"
-  exit 0
-fi
+echo "完成未重签名ipa= ${RESIGNED_IPA}"
+
+# 拿用户填写的名称重命名apk
+mv -v "${3}" "${4}"
 
 chmod 777 "${WORKDIR}"
 
-cp -v "${RESIGNED_IPA}" "${WORKDIR}"
+cp -v "${4}" "${WORKDIR}"
 
 cd $WORKDIR
 
-echo "${WORKDIR}/${RESIGNED_IPA}"
+echo "${WORKDIR}/${4}"
 #rm -rf $TMPDIR
 
-if [ ! -e "${WORKDIR}/${RESIGNED_IPA}" ]
+if [ ! -e "${WORKDIR}/${4}" ]
 then
 echo fffff!
 fi
+
+echo "上传前=${APPNAME}"
+
+PLISTDIR=$TMPDIR"/Payload/${APPNAME}/"
+
+echo "上传后="$PLISTDIR
+
+cd ..
+cd ..
+echo 上传ipa到UpYun
+ php getpath.php "$PLISTDIR" "${5}"
+echo 上传结束
+
+# 清空本地Resigned目录
+rm -rf /Users/gwd/work/git/blueshit1.0/root/Resigned/*
+echo 本地清理完成
 
 exit 0
