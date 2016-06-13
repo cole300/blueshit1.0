@@ -6,7 +6,7 @@
 	function getList()
 	{
 		if(empty($upyun))
-			// $upyun = new UpYun('beta-xd','guoweidong','gwd860218');
+			// $upyun = new UpYun('beta-xd','guoweidong','gwd860218');;
 			$upyun = new UpYun('xindong-app','xdapp','L9tk4YRxq8EdhiBK');
 		//get upyun file list
 		try
